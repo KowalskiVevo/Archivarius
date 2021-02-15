@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+    <div class="container mt-5">
+        <div th:each="el:${title}" class="alert alert-info mt-2">
+            <h1 th:text="${el.Firstname}"></h1>
+            <h1 th:text="${el.Lastname}"></h1>
+            <h1 th:text="${el.Middlename}"></h1>
+            <h1 th:text="${el.id}"></h1>
+        </div>
+    </div>
+</body>
+</html>

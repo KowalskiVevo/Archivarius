@@ -4,7 +4,11 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     password: myservice1
-    url: jdbc:postgresql://localhost:5432/test
+    url: jdbc:postgresql://localhost/test
     username: myservice1
+app:
+  soapToken: 'D468E929-A94E-4F16-A7D2-DB414EC53071'
+  url: 'http://localhost:8081'
+  soapUrl: 'https://cas-test.hostco.ru/RegUserService/services/RegUserService'
 server:
   port: 8081

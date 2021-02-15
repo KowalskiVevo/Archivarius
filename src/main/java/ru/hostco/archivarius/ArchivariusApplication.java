@@ -5,10 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("ru.hostco.archivarius.controllers")
+@ComponentScan({"ru.hostco.archivarius.controllers","ru.hostco.archivarius.soap_examples","ru.hostco.archivarius.config"})
 public class ArchivariusApplication {
 	public static void main(String[] args) {
-		System.out.print("Запуск Архивариуса\n");
 		SpringApplication.run(ArchivariusApplication.class, args);
 	}
 }
