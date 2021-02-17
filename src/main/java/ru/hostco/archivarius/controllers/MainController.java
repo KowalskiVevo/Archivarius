@@ -78,7 +78,10 @@ public class MainController {
     public ResponseEntity<UsersDataContainer> getPatients(
             @RequestParam(value = "UserSnils", required = false) String UserSnils,
             @RequestParam(value = "UserLastName", required = false) String UserLastName) {
-        final UsersDataContainer patientList = iemkClient.getContainer(UserSnils, UserLastName);
-        return new ResponseEntity<>(patientList, HttpStatus.OK);
+        final UsersDataContainer userList = iemkClient.getContainer(UserSnils, UserLastName);
+        if (userList.getUsersContainer().size() == 0){
+            return null;
+        }
+        return new ResponseEntity<>(userList, HttpStatus.OK);
     }
 }
